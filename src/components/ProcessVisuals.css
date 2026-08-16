@@ -1,0 +1,16 @@
+.process-visuals-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  background-color: transparent;
+}
+
+.process-img {
+  width: 100%;
+  height: auto;
+  max-width: 1600px;
+  object-fit: contain;
+}

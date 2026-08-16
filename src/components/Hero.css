@@ -1,0 +1,90 @@
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.hero-greeting {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 4.5rem); /* Reduced size */
+  line-height: 1;
+  margin: 0;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.8rem);
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0 1rem; /* Left margin for spacing when on same line */
+  letter-spacing: -0.01em;
+  display: inline-block; /* Helps with margins and wrapping */
+}
+
+.cursive-text {
+  font-family: var(--font-cursive);
+  color: var(--accent-color);
+  font-weight: normal;
+  font-size: 1.3em;
+  padding-right: 0.2em;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 25%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.scroll-text {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: rgba(255, 255, 255, 0.7);
+  margin-right: -0.25em; /* Standard letter-spacing centering fix */
+  animation: textFade 2.2s ease-in-out infinite;
+}
+
+.scroll-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: scrollBounce 2.2s ease-in-out infinite;
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(8px); opacity: 1; }
+}
+
+@keyframes textFade {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}
+
+@media (max-width: 768px) {
+  .scroll-indicator {
+    bottom: 15%;
+  }
+}

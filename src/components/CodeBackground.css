@@ -1,0 +1,85 @@
+.code-background {
+  position: absolute;
+  inset: 0;
+  background-color: #000000;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.code-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70vw;
+  height: 60vh;
+  background: radial-gradient(ellipse at center, rgba(0, 211, 189, 0.12) 0%, rgba(0, 0, 0, 0) 60%);
+  z-index: 1;
+}
+
+.code-snippet {
+  position: absolute;
+  opacity: 0.35; /* Target 25-35% visual prominence */
+  color: #7a8590; /* Default muted gray */
+  white-space: pre;
+  z-index: 2;
+}
+
+/* Muted Syntax Highlighting Colors */
+.code-keyword { color: #b48ead; } /* muted purple */
+.code-method { color: #88c0d0; } /* dark teal/cyan */
+.code-string { color: #a3be8c; } /* soft green */
+.code-variable { color: #d8dee9; } /* gray/white */
+.code-type { color: #ebcb8b; } /* muted yellow */
+.code-boolean { color: #d08770; } /* muted orange/brown */
+.code-comment { color: #5c6370; font-style: italic; }
+.code-number { color: #d08770; }
+
+/* Positioning - distributed around edges, keeping center clean */
+/* Left Side */
+.code-left-1 { top: 15%; left: 8%; }
+.code-left-2 { top: 28%; left: 4%; }
+.code-left-3 { top: 45%; left: 5%; }
+.code-left-4 { top: 68%; left: 7%; }
+.code-left-5 { top: 78%; left: 5%; }
+.code-left-6 { top: 90%; left: 8%; }
+.code-left-7 { top: 95%; left: 25%; }
+
+/* Right Side */
+.code-right-1 { top: 12%; right: 12%; }
+.code-right-2 { top: 25%; right: 8%; }
+.code-right-3 { top: 38%; right: 5%; }
+.code-right-4 { top: 62%; right: 7%; }
+.code-right-5 { top: 70%; right: 15%; }
+.code-right-6 { top: 78%; right: 10%; }
+.code-right-7 { top: 88%; right: 12%; }
+.code-right-8 { top: 92%; right: 5%; }
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .desktop-only {
+    display: none;
+  }
+  .code-snippet {
+    opacity: 0.25;
+    font-size: 0.75rem;
+  }
+  .code-glow {
+    width: 90vw;
+    height: 50vh;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Hide snippets that might overlap the center headline on small screens */
+  .code-left-3, .code-left-4, .code-right-4, .code-right-5 {
+    display: none;
+  }
+  
+  .code-left-2 { top: 20%; left: 2%; }
+  .code-right-2 { top: 22%; right: 2%; }
+}

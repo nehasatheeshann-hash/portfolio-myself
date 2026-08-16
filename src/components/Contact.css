@@ -1,0 +1,56 @@
+.contact-section {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-content h1 {
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin-bottom: 4rem;
+}
+
+.contact-links {
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.contact-links p {
+  margin: 0;
+}
+
+.get-in-touch {
+  display: inline-block;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  letter-spacing: 0.1em;
+}
+
+.social-links-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  font-size: 2.2rem;
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  color: var(--text-color);
+  transform: translateY(-5px) scale(1.1);
+}
