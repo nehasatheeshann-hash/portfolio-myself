@@ -27,7 +27,7 @@ export default function Certifications() {
       issuer: "HH26",
       date: "2024",
       description: "Secured a position in the Top 100 teams nationwide.",
-      link: "/Certificate_Top 100_HH26.pdf",
+      link: "/Certificate_Top_100_HH26.pdf",
     }
   ];
 
