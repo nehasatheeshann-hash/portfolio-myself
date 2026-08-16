@@ -9,7 +9,7 @@ export default function Certifications() {
       id: 1,
       title: "NPTEL Certification",
       issuer: "IIT / NPTEL",
-      date: "2024",
+      date: "2025",
       description: "Successfully completed the NPTEL certification course.",
       link: "/nptel.jpg",
     },
@@ -17,17 +17,25 @@ export default function Certifications() {
       id: 2,
       title: "Innovit Hackathon",
       issuer: "Innovit",
-      date: "2024",
+      date: "2025",
       description: "Certificate of achievement for the Innovit Hackathon.",
       link: "/innovit.jpg",
     },
     {
       id: 3,
       title: "Top 100 - HH26 Hackathon",
-      issuer: "HH26",
-      date: "2024",
+      issuer: "MINISTRY OF TEXTILES - INDIA",
+      date: "2026",
       description: "Secured a position in the Top 100 teams nationwide.",
       link: "/Certificate_Top_100_HH26.pdf",
+    },
+    {
+      id: 4,
+      title: "Generative AI Essentials",
+      issuer: "Coursera / IBM",
+      date: "2025",
+      description: "Earned badge for Generative AI and LLMs for Data.",
+      link: "/GenAI.pdf",
     }
   ];
 
@@ -37,14 +45,14 @@ export default function Certifications() {
         <h2 className="cert-title"><SplitText text="Certifications & Awards" /></h2>
         <p className="cert-subtitle">Milestones of continuous learning and achievement</p>
       </div>
-      
+
       <div className="cert-grid">
         {certs.map((cert, index) => (
-          <a 
+          <a
             href={cert.link}
             target={cert.link !== "#" ? "_blank" : "_self"}
-            rel="noopener noreferrer" 
-            className="cert-card reveal" 
+            rel="noopener noreferrer"
+            className="cert-card reveal"
             style={{ transitionDelay: `${index * 0.2}s` }}
             key={cert.id}
           >
