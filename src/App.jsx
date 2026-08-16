@@ -7,6 +7,7 @@ import InteractiveCode from './components/InteractiveCode';
 import Experience from './components/Experience';
 import SelectedWork from './components/SelectedWork';
 import EventsHackathons from './components/EventsHackathons';
+import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import ProjectDetail from './pages/ProjectDetail';
 import About from './pages/About';
@@ -42,6 +43,7 @@ function Home() {
       <Experience />
       <SelectedWork />
       <EventsHackathons />
+      <Certifications />
       <Contact />
     </div>
   );
